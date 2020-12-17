@@ -44,25 +44,36 @@ print(meziradek)
 #kontrola loginu a hesla
 if loginy.get(jmeno) == heslo :
 	print('We know you! Hello and continue please.')
-
 else:
-	print('Get out, stranger.')
-#tady by mel byt exit() ale s nim to nefunguje
-
+    print('Get out, stranger.')
+    exit()
 
 #vyber textu
 print(meziradek)
 print('We have 3 texts to be analyzed.')
-cislotextu = input('Enter number 1, 2 or 3 to select text: ')
+numtext = input('Enter number 1, 2 or 3 to select text: ')
 
-if cislotextu == '1':
-    vybranytext = texts[0]
-elif cislotextu == '2':
-    vybranytext = texts[1]
-elif cislotextu == '3':
-    vybranytext = texts[2]
+if numtext == '1':
+    selecttext = texts[0]
+elif numtext == '2':
+    selecttext = texts[1]
+elif numtext == '3':
+    selecttext = texts[2]
+else:
+    print('Wrong number, bye.')
+    exit()
 
 #prace s textem
+print(meziradek)
+countwords = len(selecttext.split())
+print('There are ',countwords, 'words in the selected text.')
 
-print(vybranytext)
+
+
+
+
+
+
+
+
 
