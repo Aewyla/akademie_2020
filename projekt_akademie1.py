@@ -68,6 +68,47 @@ print(meziradek)
 countwords = len(selecttext.split())
 print('There are ',countwords, 'words in the selected text.')
 
+titlecount = 0
+titletext = selecttext.split()
+while titletext:
+    titleword = titletext.pop(0)
+    if titleword.istitle():
+        titlecount = titlecount +1
+print('There are ',titlecount, 'titlecase words.')
+
+uppercount = 0
+uppertext = selecttext.split()
+while uppertext:
+    upperword = uppertext.pop(0)
+    if upperword.isupper():
+        uppercount = uppercount +1
+print('There are ', uppercount, 'uppercase words.')
+
+lowercount = 0
+lowertext = selecttext.split()
+while lowertext:
+    lowerword = lowertext.pop(0)
+    if lowerword.islower():
+        lowercount = lowercount +1
+print('There are ', lowercount, 'lowercase words.')
+
+numercount = 0
+numertext = selecttext.split()
+while numertext:
+    numerword = numertext.pop(0)
+    if numerword.isnumeric():
+        numercount = numercount +1
+print('There are ', numercount,'numeric strings.')
+
+print(meziradek)
+
+#graf
+
+
+
+
+
+
 
 
 
