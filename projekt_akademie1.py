@@ -102,7 +102,34 @@ print('There are ', numercount,'numeric strings.')
 
 print(meziradek)
 
+
 #graf
+graftext = selecttext.replace(',','').replace('.','')
+graftext = graftext.split()
+
+print(graftext)
+counts = {}
+for i in graftext:
+    if len(i) not in counts:
+        counts[len(i)] = 1
+    else:
+        counts[len(i)]+=1
+
+counts = sorted(counts.items(), key=lambda x:x[0]) #Converts to a list of tuples and sorts
+
+for j in counts:
+    print(str(j[0])+"\t\t"+(int(j[1])*'*')+' '+str(j[1]))
+
+print(meziradek)
+numersumm = 0
+numertextsumm = selecttext.split()
+while numertextsumm:
+    numerwordsumm = numertextsumm.pop(0)
+    if numerwordsumm.isnumeric():
+        numersumm = numersumm + int(numerwordsumm)
+print('If we summed all the numbers in this text we would get:', numersumm)
+
+print(meziradek)
 
 
 
