@@ -121,6 +121,8 @@ for j in counts:
     print(str(j[0])+"\t\t"+(int(j[1])*'*')+' '+str(j[1]))
 
 print(meziradek)
+
+#soucet cisel
 numersumm = 0
 numertextsumm = selecttext.split()
 while numertextsumm:
