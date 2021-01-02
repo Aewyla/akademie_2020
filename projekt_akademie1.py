@@ -115,7 +115,7 @@ for i in graftext:
     else:
         counts[len(i)]+=1
 
-counts = sorted(counts.items(), key=lambda x:x[0]) #Converts to a list of tuples and sorts
+counts = sorted(counts.items(), key=lambda x:x[0])
 
 for j in counts:
     print(str(j[0])+"\t\t"+(int(j[1])*'*')+' '+str(j[1]))
