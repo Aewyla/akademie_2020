@@ -128,3 +128,4 @@ while numertextsumm:
         numersumm = numersumm + int(numerwordsumm)
 print('If we summed all the numbers in this text we would get:', numersumm)
 print(meziradek)
+
