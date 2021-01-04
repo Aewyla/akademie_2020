@@ -1,6 +1,7 @@
-#data, loginy, pomocne radky atd
-
-loginy = {'bob': '123', 'ann': 'pass123', 'mike': 'password123', 'liz': 'pass123'}
+loginy = {'bob': '123',
+          'ann': 'pass123',
+          'mike': 'password123',
+          'liz': 'pass123'}
 meziradek = 30 * '-'
 texts = ['''
 Situated about 10 miles west of Kemmerer, 
@@ -32,8 +33,6 @@ in modern oceans. Other fish such as paddlefish,
 garpike and stingray are also present.'''
 ]
 
-
-
 #zacatek
 print(meziradek)
 print('Welcome to the app. Please log in.')
@@ -42,8 +41,8 @@ heslo = input('Password: ')
 print(meziradek)
 
 #kontrola loginu a hesla
-if loginy.get(jmeno) == heslo :
-	print('We know you! Hello and continue please.')
+if loginy.get(jmeno) == heslo:
+    print('We know you! Hello and continue please.')
 else:
     print('Get out, stranger.')
     exit()
@@ -102,12 +101,10 @@ print('There are ', numercount,'numeric strings.')
 
 print(meziradek)
 
-
 #graf
 graftext = selecttext.replace(',','').replace('.','')
 graftext = graftext.split()
 
-print(graftext)
 counts = {}
 for i in graftext:
     if len(i) not in counts:
@@ -130,5 +127,4 @@ while numertextsumm:
     if numerwordsumm.isnumeric():
         numersumm = numersumm + int(numerwordsumm)
 print('If we summed all the numbers in this text we would get:', numersumm)
-
 print(meziradek)
