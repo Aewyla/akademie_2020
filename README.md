@@ -1,2 +1,2 @@
 # akademie_2020
- prvni
+ Engeto python akademie
