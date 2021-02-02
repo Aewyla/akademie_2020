@@ -26,7 +26,6 @@ lw_recipes = dict(des_sc_pauldrons=(36.0569 - (penumbra * 3 + leather * 7 + bone
                   compo_bow=(89.5431 - (penumbra * 8 + leather * 5 + bone * 6)),
                   d_l_cest=(71.1121 - (penumbra * 5 + leather * 10 + bone * 4)))
 
-print('tadáá')
 
 for key, value in lw_recipes.items():
     print(key, ' : ', value)
