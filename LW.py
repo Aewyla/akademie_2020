@@ -21,12 +21,15 @@ lw_recipes = dict(des_sc_pauldrons=(36.0569 - (penumbra * 3 + leather * 7 + bone
                   des_le_waistguard=(25.4670 - (penumbra * 2 + leather * 5)),
                   des_le_armguards=(25.5780 - (penumbra * 1 + leather * 6)),
                   des_le_treads=(36.2825 - (penumbra * 2 + leather * 9)),
-                  compo_cross=0,
+                  compo_cross=(89.8607 - (penumbra * 10 + leather * 5 + bone * 2)),
                   b_b_knuc=(71.3733 - (penumbra * 5 + leather * 8 + bone * 6)),
                   compo_bow=(89.5431 - (penumbra * 8 + leather * 5 + bone * 6)),
                   d_l_cest=(71.1121 - (penumbra * 5 + leather * 10 + bone * 4)))
 
-print(lw_recipes)
+print('tadáá')
+
+for key, value in lw_recipes.items():
+    print(key, ' : ', value)
 
 print(max(lw_recipes, key=lw_recipes.get))
 print(min(lw_recipes, key=lw_recipes.get))
