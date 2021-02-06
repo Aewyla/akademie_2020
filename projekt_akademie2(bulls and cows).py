@@ -40,3 +40,5 @@ elapsed_time = time.time() - start_time
 
 print("Correct, you've guessed the right number in", score, "guesses!")
 print('Your time:', (time.strftime("%H:%M:%S", time.gmtime(elapsed_time))))
+
+
