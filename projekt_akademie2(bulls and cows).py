@@ -21,7 +21,7 @@ while bulls < 4:
     guess = list(map(int, guess_input))
 
     while len(guess) < 4 or len(guess) > 4:
-        print("That guess is invalid!")
+        print("I said 4 numbers. Try again!")
         guess_input = list(input("\nEnter four numbers: "))
         guess = list(map(int, guess_input))
 
