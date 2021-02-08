@@ -27,15 +27,15 @@ while bulls < 4:
     guess_input = input("\nEnter four numbers: ")
 
     while not guess_input.isdigit():
-        print("I said 4 numbers. Try again!")
-        guess_input = input("\nEnter four numbers: ")
-
-    while len(guess_input) < 4 or len(guess_input) > 4:
         print("I said numbers. Try again!")
         guess_input = input("\nEnter four numbers: ")
 
+    while len(guess_input) < 4 or len(guess_input) > 4:
+        print("I said 4 numbers. Try again!")
+        guess_input = input("\nEnter four numbers: ")
+
     while len(guess_input) > len(set(guess_input)):
-        print("let's try different numbers okey?")
+        print("Let's try different numbers, okey? Try, again!")
         guess_input = input("\nEnter four numbers: ")
 
     guess_list = list(guess_input)
