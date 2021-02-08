@@ -1,8 +1,16 @@
 import random
 import time
 
+generated_number = []
+def gamenumber():
+    global generated_number
+    generated_number = random.sample(range(0, 9), 4)
+    if generated_number[0] == 0:
+        generated_number.clear()
+        gamenumber()
+gamenumber()
+
 start_time = time.time()
-generated_number = random.sample(range(0, 9), 4)
 cows = 0
 bulls = 0
 score = 0
@@ -16,15 +24,18 @@ Let's play a bulls and cows game.
 while bulls < 4:
     cows = 0
     bulls = 0
+    guess_input = input("\nEnter four numbers: ")
 
-    guess_input = list(input("\nEnter four numbers: "))
-    guess = list(map(int, guess_input))
-
-    while len(guess) < 4 or len(guess) > 4:
+    while not guess_input.isdigit():
         print("I said 4 numbers. Try again!")
-        guess_input = list(input("\nEnter four numbers: "))
-        guess = list(map(int, guess_input))
+        guess_input = input("\nEnter four numbers: ")
 
+    while len(guess_input) < 4 or len(guess_input) > 4:
+        print("I said 4 numbers. Try again!")
+        guess_input = input("\nEnter four numbers: ")
+
+    guess_list = list(guess_input)
+    guess = list(map(int, guess_list))
 
     for i in range(len(generated_number)):
         if guess[i] in generated_number and guess[i] != generated_number[i]:
